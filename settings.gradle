@@ -1,0 +1,4 @@
+rootProject.name = 'publish'
+include 'publish-aar'
+include 'publish-jar'
+

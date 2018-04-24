@@ -1,0 +1,32 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+}
+
+uploadArchives {
+    repositories {
+        //配置仓库地址和模块相关信息
+        mavenDeployer {
+            snapshotRepository(url: 'http://10.100.62.98:8086/nexus/content/repositories/snapshots') {
+                authentication(userName: 'deployment', password: 'deployment123')
+            }
+            repository(url: 'http://10.100.62.98:8086/nexus/content/repositories/releases') {
+                authentication(userName: 'deployment', password: 'deployment123')
+            }
+            pom.project {
+                version '0.0.1'
+                artifactId 'publish-jar'
+                groupId 'cn.daily.android'
+                description 'publish aar gradle'
+                packaging 'gradle'
+            }
+        }
+
+        //上传文件
+        artifacts {
+            archives file('publish-jar.gradle')
+        }
+    }
+}
