@@ -56,7 +56,6 @@ uploadArchives {
 
         //上传文件
         artifacts {
-            archives file(project.name + '.aar')
             archives androidSourcesJar
         }
     }

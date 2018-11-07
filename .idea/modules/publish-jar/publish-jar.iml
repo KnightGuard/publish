@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":publish-jar" external.linked.project.path="$MODULE_DIR$/../../../publish-jar" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="publish" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../../publish-jar/out/production/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../publish-jar/out/test/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../publish-jar">
+      <excludeFolder url="file://$MODULE_DIR$/../../../publish-jar/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../publish-jar/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../publish-jar/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

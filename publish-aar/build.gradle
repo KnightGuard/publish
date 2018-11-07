@@ -16,7 +16,7 @@ uploadArchives {
                 authentication(userName: 'deployment', password: 'deployment123')
             }
             pom.project {
-                version '0.0.5.1-SNAPSHOT'
+                version '0.0.6'
                 artifactId 'publish'
                 groupId 'cn.daily.android'
                 description 'publish aar gradle'
