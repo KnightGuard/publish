@@ -28,6 +28,16 @@ task readProperty() {
     inputStream.close();
 }
 
+task createTag(type: Exec) {
+    executable "sh"
+    args "-c", "git tag v" + libVersion
+}
+
+task pushTag(type: Exec) {
+    executable "sh"
+    args "-c", "git push origin v" + libVersion
+}
+
 //上传AAR、source、JavaDoc脚本
 uploadArchives {
     repositories {
@@ -58,5 +68,13 @@ uploadArchives {
         artifacts {
             archives androidSourcesJar
         }
+    }
+}.doLast {
+    if (!libVersion.endsWith("-SNAPSHOT")) {
+        createTag.execute()
+    }
+}.doLast {
+    if (!libVersion.endsWith("-SNAPSHOT")) {
+        pushTag.execute()
     }
 }
