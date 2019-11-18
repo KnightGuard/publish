@@ -50,7 +50,7 @@ uploadArchives {
 
         //创建源文件任务
         task androidSourcesJar(type: Jar) {
-            archiveClassifier.set("sources")
+            classifier = 'sources'
             from android.sourceSets.main.java.srcDirs
         }
 
